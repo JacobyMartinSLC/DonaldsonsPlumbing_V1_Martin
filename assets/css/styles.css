@@ -72,56 +72,98 @@
   }
   
   /* Hero */
-  
-  .hero {
-    background: linear-gradient(135deg, #1f3b5b, #2f567f);
-    color: #fff;
-    padding: 3rem 0;
-  }
-  
-  .hero-inner {
-    display: grid;
-    gap: 2rem;
-    align-items: center;
-  }
-  
-  .hero-text h1 {
-    margin: 0;
-    font-size: 2rem;
-  }
-  
-  .hero-actions {
-    margin-top: 1.5rem;
-    display: flex;
-    gap: 1rem;
-  }
-  
-  .btn-primary {
-    background: var(--accent);
-    color: #fff;
-    padding: 0.6rem 1.2rem;
-    border-radius: var(--radius);
-    text-decoration: none;
-    font-weight: 600;
-  }
-  
-  .btn-secondary {
-    background: #fff;
-    color: var(--primary);
-    padding: 0.6rem 1.2rem;
-    border-radius: var(--radius);
-    text-decoration: none;
-    font-weight: 600;
-  }
-  
-  .placeholder {
-    background: rgba(255,255,255,0.1);
-    padding: 3rem 1rem;
-    border-radius: var(--radius);
-    border: 1px dashed rgba(255,255,255,0.4);
-    text-align: center;
-  }
-  
+  /* Full-width home hero */
+.home-hero {
+  position: relative;
+  height: 70vh; 
+  background-image: url('../img/home-hero.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+/* Dark overlay for opacity */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65); /* adjust opacity here */
+  z-index: 1;
+}
+
+/* Hero text content */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+}
+
+.home-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.home-hero p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+
+/*Page hero
+/* Shared full-width hero style for Services, About, Contact */
+.page-hero {
+  position: relative;
+  height: 65vh; /* adjust if you want taller */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+/* Overlay for opacity */
+.page-hero .hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 1;
+}
+
+/* Text content */
+.page-hero .hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+}
+
+.page-hero h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.page-hero p {
+  font-size: 1.1rem;
+}
+
+/* Services hero image */
+.services-hero {
+  background-image: url('../img/services-hero.png');
+}
+
+/* About hero image */
+.about-hero {
+  background-image: url('../img/about-hero.png');
+  background-position: center top;
+}
+
+.contact-hero {
+  background-image: url('../img/contact-hero.png');
+}
+
+
   /* Trust Bar */
   
   .trust-bar {
@@ -198,3 +240,39 @@
       display: block;
     }
   }
+
+/* Section Backgrounds */
+.section-light {
+  background: #f0f4f8;
+  padding: 3rem 0;
+}
+
+.section-white {
+  background: #fff;
+  padding: 3rem 0;
+}
+
+/* Service Images */
+.service-img {
+  width: 100%;
+  border-radius: var(--radius);
+  margin-bottom: 1rem;
+}
+
+/* About Layout */
+.about-layout {
+  display: grid;
+  gap: 2rem;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: var(--radius);
+}
+
+@media (min-width: 800px) {
+  .about-layout {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+}
