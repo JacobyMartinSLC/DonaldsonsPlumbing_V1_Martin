@@ -61,6 +61,22 @@
     border: 1px solid var(--primary);
     border-radius: var(--radius);
   }
+  .btn-white{
+  display: inline-block;
+  background: #ffffff;
+  color: #333;
+  padding: 12px 24px;
+  border-radius: 8px; /* rounded edges */
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.2s ease;
+  border: 2px solid #ffffff;
+  }
+  .btn-hover{
+  background: transparent;
+  color: #ffffff;
+  border-color: #ffffff;
+  }
   
   /* Mobile Nav */
   
@@ -200,11 +216,26 @@
   /* Footer */
   
   .footer {
-    background: #1f2933;
+    background: #ab4e23;
     color: #cbd2e1;
     padding: 1.5rem 0;
     text-align: center;
   }
+  /*Logo top left style*/
+  .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* space between logo and text */
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.logo-img {
+  height: 40px;   /* adjust size here */
+  width: auto;
+  border-radius: 4px; /* optional */
+}
+
   
   /* Responsive */
   
